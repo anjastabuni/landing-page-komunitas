@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Tailwind CSS -->
-    <link href="./src/output.css" rel="stylesheet" />
+    <link href="./src/css/output.css" rel="stylesheet" />
 
     <!-- Alpine JS CDN -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- css local external -->
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body class="bg-gray-100">
     <!-- NAVBAR START -->
@@ -19,11 +23,11 @@
 
         <!-- Navbar Content menu destop -->
         <div class="hidden md:flex space-x-6">
-          <a href="" class="text-gray-600 hover:text-blue-600">Beranda</a>
-          <a href="" class="text-gray-600 hover:text-blue-600">Tentang</a>
-          <a href="" class="text-gray-600 hover:text-blue-600">Program</a>
+          <a href="" class="text-gray-600 hover:text-blue-600">Home</a>
+          <a href="" class="text-gray-600 hover:text-blue-600">Coding Playground</a>
+          <a href="" class="text-gray-600 hover:text-blue-600">Project</a>
+          <a href="" class="text-gray-600 hover:text-blue-600">Blog</a>
           <a href="" class="text-gray-600 hover:text-blue-600">Event</a>
-          <a href="" class="text-gray-600 hover:text-blue-600">Kontak</a>
         </div>
 
         <!-- hamburger menu -->
@@ -47,7 +51,20 @@
       <!-- containter end -->
     </nav>
     <!-- NAVBAR END -->
+
     <!-- HOME START -->
+    <section class="container mx-auto flex items-center justify-center min-h-screen px-6 md:px-12 lg:px-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full max-w-6xl">
+        <div class="flex justify-center">
+          <img src="./src/img/profile/profil.png" class="w-64 object-cover md:w-full" alt="Profil Komunitas Wamena" />
+        </div>
+        <div class="text-center md:text-right">
+          <h1 class="font-bold font-grotesque text-2xl md:text-4xl lg:text-5xl xl:text-6xl py-4 leading-tight">The choice community for developers in Wamena Papua</h1>
+          <p class="text-lg">Join the developer community in Wamena, Papua, to connect, collaborate, and grow together. Discover opportunities, enhance your skills, and build the future of technology in your region.</p>
+          <button class="bg-black hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-full mt-6 transition-all">Join Community</button>
+        </div>
+      </div>
+    </section>
     <!-- HOME END -->
   </body>
 </html>

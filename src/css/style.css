@@ -1,0 +1,24 @@
+/* darker gretosque and manrope */
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Lexend+Deca:wght@100..900&family=Manrope:wght@200..800&display=swap");
+
+/* .darker-grotesque-<uniquifier > {
+  font-family: "Darker Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+@thema {
+  --font-grotesque: "Darker Grotesque", sans-serif;
+}
+
+* {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  text-size: 18px;
+}
+h1 {
+  font-family: "Darker Grotesque", sans-serif;
+  text-size: 95px;
+}
