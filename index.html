@@ -11,11 +11,16 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- css local external -->
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body class="bg-gray-100">
     <!-- NAVBAR START -->
-    <nav class="w-full fixed top-0 left-0 right-0 z-50 bg-white">
+    <nav
+      x-data="{scrolled: false}"
+      x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 50)"
+      :class="scrolled ? 'bg-white shadow-md': 'bg-transparent'"
+      class="w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
       <!-- containter start -->
       <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <!-- Navbar Logo -->
@@ -59,12 +64,106 @@
           <img src="./src/img/profile/profil.png" class="w-64 object-cover md:w-full" alt="Profil Komunitas Wamena" />
         </div>
         <div class="text-center md:text-right">
-          <h1 class="font-bold font-grotesque text-2xl md:text-4xl lg:text-5xl xl:text-6xl py-4 leading-tight">The choice community for developers in Wamena Papua</h1>
-          <p class="text-lg">Join the developer community in Wamena, Papua, to connect, collaborate, and grow together. Discover opportunities, enhance your skills, and build the future of technology in your region.</p>
-          <button class="bg-black hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-full mt-6 transition-all">Join Community</button>
+          <h1 class="font-extrabold font-[Darker_Grotesque] text-2xl md:text-4xl lg:text-5xl xl:text-6xl py-4 leading-tight">The choice community for developers in Wamena Papua</h1>
+          <p class="text-lg font-[Manrope]">Join the developer community in Wamena, Papua, to connect, collaborate, and grow together. Discover opportunities, enhance your skills, and build the future of technology in your region.</p>
+          <button class="bg-black hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-full mt-6 transition-all font-[Manrope]">Join Community</button>
         </div>
       </div>
     </section>
     <!-- HOME END -->
+
+    <!-- ABOUT START -->
+    <section class="container mx-auto flex flex-col items-center justify-center py-16">
+      <div class="max-w-3xl text-center">
+        <h3 class="text-4xl font-[Darker_Grotesque] font-bold">Welcome to WamenaDev</h3>
+        <p class="text-lg font-[Manrope] text-gray-600 mt-4 px-6 md:px-10">
+          "WamenaDev is a community focused on developing the technology ecosystem in Wamena, Papua Highlands. We serve as a platform for local developers to learn, share knowledge, collaborate on projects, and drive digital innovation.
+          Join us and let's build the future of technology in Wamena together!"
+        </p>
+      </div>
+      <div class="mt-8">
+        <img src="./src/img/komunitas.png" class="rounded-2xl max-w-2xl w-full shadow-lg object-cover" alt="Komunitas Wamena" />
+      </div>
+    </section>
+    <!-- ABOUT END -->
+
+    <!-- HAPPENS START -->
+    <section class="container mx-auto text-center py-16">
+      <div class="max-w-3xl mx-auto py-12">
+        <h3 class="text-4xl font-[Darker_Grotesque] font-bold">What happens at WamenaDev</h3>
+        <p class="text-lg font-[Manrope] text-gray-600 mt-4 px-6 md:px-10">
+          provides an overview of the various activities and initiatives at WamenaDev, including meetups, coding workshops, collaborative projects, career development, and social impact through technology in Wamena.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h3 class="text-2xl font-[Darker_Grotesque] font-medium">Regular Meetups & Tech Talks</h3>
+          <p class="text-md text-gray-600 py-4">We host regular meetups and tech discussions where local developers share insights on programming, the latest technology trends, and digital innovation.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h3 class="text-2xl font-[Darker_Grotesque] font-medium">Coding Playground & Workshops</h3>
+          <p class="text-md text-gray-600 py-4">A space for members to practice coding, solve programming challenges, and enhance their skills through hands-on workshops and hackathons.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h3 class="text-2xl font-[Darker_Grotesque] font-medium">Open Source & Collaboration Projects</h3>
+          <p class="text-md text-gray-600 py-4">Helping local developers grow their careers through mentorship, freelance opportunities, portfolio reviews, and industry connections.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h3 class="text-2xl font-[Darker_Grotesque] font-medium">Community & Social Impact</h3>
+          <p class="text-md text-gray-600 py-4">Beyond technology, we engage in social initiatives such as digital training for students and small businesses, and collaborations with local schools and universities.</p>
+        </div>
+      </div>
+    </section>
+    <!-- HAPPENS END -->
+
+    <!-- WE ARE WAMENADEV START -->
+    <section class="container mx-auto text-center py-16">
+      <div class="max-w-3xl mx-auto py-12">
+        <h3 class="text-4xl font-[Darker_Grotesque] font-bold">We are WamenaDev</h3>
+        <p class="text-lg font-[Manrope] text-gray-600 mt-4 px-6 md:px-10">
+          A diverse community of developers, designers, freelancers, tech enthusiasts, and innovators in Wamena, united by a shared mission to grow the local tech ecosystem, foster collaboration, and empower digital talents.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 mb-12">
+        <!-- user 1 start -->
+        <div class="bg-white shadow-lg rounded-lg">
+          <img src="src/img/users/ullagay.png" alt="rebly tabuni" class="w-full object-cover mx-auto rounded-lg" />
+          <div class="py-4">
+            <h3 class="text-2xl font-[Darker_Grotesque] font-medium">Ullagay</h3>
+            <p class="text-sm text-gray-600 py-1">Fullstack Developer</p>
+          </div>
+        </div>
+        <!-- user 1 end -->
+        <!-- user 2 start -->
+        <div class="bg-white shadow-lg rounded-lg">
+          <img src="src/img/users/Nare.png" alt="rebly tabuni" class="w-full object-cover mx-auto rounded-lg" />
+          <div class="py-4">
+            <h3 class="text-2xl font-[Darker_Grotesque] font-medium">Nayak</h3>
+            <p class="text-sm text-gray-600 py-1">Software Engineer</p>
+          </div>
+        </div>
+        <!-- user 2 end -->
+        <!-- user 3 start -->
+        <div class="bg-white shadow-lg rounded-lg">
+          <img src="src/img/users/ullagay.png" alt="rebly tabuni" class="w-full object-cover mx-auto rounded-lg" />
+          <div class="py-4">
+            <h3 class="text-2xl font-[Darker_Grotesque] font-medium">Nare</h3>
+            <p class="text-sm text-gray-600 py-1">Fullstack Developer</p>
+          </div>
+        </div>
+        <!-- user 3 end -->
+        <!-- user 4 start -->
+        <div class="bg-white shadow-lg rounded-lg">
+          <img src="src/img/users/po.png" alt="rebly tabuni" class="w-full object-cover mx-auto rounded-lg" />
+          <div class="py-4">
+            <h3 class="text-2xl font-[Darker_Grotesque] font-medium">Po</h3>
+            <p class="text-sm text-gray-600 py-1">Fullstack Developer</p>
+          </div>
+        </div>
+        <!-- user 4 end -->
+      </div>
+      <button class="bg-black hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-full mt-12 transition-all font-[Manrope]">Become a nomdai today</button>
+    </section>
+    <!-- WE ARE WAMENADEV END -->
   </body>
 </html>
